@@ -1,0 +1,232 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    /* Alinhamento dos elementos do cabeçalho */
+    align-items: center;
+    background-color: #0f001b;
+    padding: 20px 0;
+    /* Ajustado para mais espaço */
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 80px;
+    /* Ajuste o tamanho do logotipo */
+    margin-right: 10px;
+    /* Espaço entre o logotipo e o nome */
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    color: #a200ff;
+    /* Cor do título */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #a200ff;
+}
+
+.hero {
+    background: url('fundo.jpg') no-repeat center center/cover;
+    /* Ajuste o caminho da imagem de fundo */
+    text-align: center;
+    padding: 319px 20px;
+    /* Aumentado o padding */
+    color: white;
+}
+
+.hero h2 {
+    font-size: 10em;
+    /* Aumentado para destaque */
+    margin: 0 0 10px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.hero p {
+    font-size: 2em;
+    /* Aumentado para melhor legibilidade */
+}
+
+.hero .btn {
+    background-color: #a200ff;
+    color: #ffffff;
+    padding: 15px 30px;
+    /* Aumentado para mais destaque */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.hero .btn:hover {
+    background-color: #1e0041;
+    transform: scale(1.05);
+    /* Efeito de aumento ao passar o mouse */
+}
+
+.about,
+.products,
+.contact {
+    padding: 80px 20px;
+    /* Aumentado o padding para maior espaçamento */
+    text-align: center;
+    border-top: 2px solid #800080;
+    /* Linha divisória para melhor separação */
+    border-bottom: 2px solid #800080;
+    /* Linha divisória para melhor separação */
+}
+
+.about p {
+    max-width: 500px;
+    /* Aumentado para maior leitura */
+    margin: 0 auto;
+    line-height: 1;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 30px;
+    /* Aumentado o espaçamento entre os produtos */
+}
+
+.product {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    width: 240px;
+    /* Largura fixa para alinhamento */
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact input,
+.contact textarea {
+    width: 80%;
+    max-width: 400px;
+    margin: 15px 0;
+    /* Aumentado para espaçamento */
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    /* Fundo para inputs */
+    color: white;
+    /* Texto branco para inputs */
+}
+
+.contact button {
+    background-color: #800080;
+    color: white;
+    padding: 12px 20px;
+    /* Aumentado para destaque */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact button:hover {
+    background-color: #ffcc00;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #800080;
+}
+
+/* Estilo Responsivo */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .hero h2 {
+        font-size: 2.5em;
+    }
+
+    .product {
+        width: 200px;
+        /* Ajuste para dispositivos menores */
+    }
+
+    footer p {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .product {
+        width: 90%;
+        /* Mais largura em dispositivos móveis */
+    }
+}
